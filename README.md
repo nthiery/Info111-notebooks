@@ -1,10 +1,10 @@
-# Notebooks for the course "Info 111: Introduction à l'informatique
+# Notebooks for the course “Info 111: Introduction à l'informatique”
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nthiery/Info111-notebooks/master)
 
 This repository holds copies of the Jupyter notebooks used during the
 practice sessions of a freshmen introductory programming course (in C++)
-[Info 111](http://Nicolas.Thiery.name/Enseignement/Info111)",
+[Info 111](http://Nicolas.Thiery.name/Enseignement/Info111),
 deliverered (in French!) at Université Paris Sud in the curicullum
 "Mathématiques, Physique, Informatique".
 
