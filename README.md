@@ -1,4 +1,4 @@
-# Notebooks for the course "Info 111: Introduction à l'informatique
+# Notebooks for the course “Info 111: Introduction à l'informatique”
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nthiery/Info111-notebooks/master)
 
