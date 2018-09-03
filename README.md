@@ -5,7 +5,7 @@
 This repository holds copies of the Jupyter notebooks used during the
 practice sessions of a freshmen introductory programming course (in C++)
 [Info 111](http://Nicolas.Thiery.name/Enseignement/Info111),
-deliverered (in French!) at Université Paris Sud in the curicullum
+deliverered (in French!) at Université Paris Sud in the curiculum
 "Mathématiques, Physique, Informatique".
 
 This repository is meant for casual visitors that would like to
