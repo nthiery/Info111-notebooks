@@ -62,6 +62,7 @@ case $command in
     get)
         get "$@";;
     conda);;
+    sh);;
     *)
         echo commande info-111 $command inconnue
         help
