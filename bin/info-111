@@ -24,8 +24,8 @@ EOF
 }
 
 run () {
-    echo "Exécution de: $*"
-    $* || exit -1
+    echo "Exécution de: $@"
+    "$@" || exit -1
 }
 
 get () {
@@ -60,7 +60,7 @@ case $command in
             command="jupyter notebook --ip=127.0.0.1"
         fi;;
     get)
-        get "$*";;
+        get "$@";;
     conda);;
     *)
         echo commande info-111 $command inconnue
@@ -69,4 +69,4 @@ case $command in
         ;;
 esac
 
-run $command "$*"
+run $command "$@"
