@@ -57,6 +57,7 @@ case $command in
     jupyter);;
     get)
         get "$*";;
+    conda);;
     *)
         echo commande info-111 $command inconnue
         help
