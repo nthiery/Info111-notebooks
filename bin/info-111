@@ -61,8 +61,9 @@ case $command in
         fi;;
     get)
         get "$@";;
-    conda);;
-    sh);;
+    run) # run an arbitrary command in the conda environment; for testing and teacher's use
+        shift
+        command="$1";;
     *)
         echo commande info-111 $command inconnue
         help
