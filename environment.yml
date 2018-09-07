@@ -1,5 +1,5 @@
-# Required software to use the notebooks for the Info-111 course
-name: info-111-notebooks
+# Logiciels requis pour utiliser les documents du cours Info 111
+name: info-111
 
 channels:
 - QuantStack
@@ -12,3 +12,4 @@ dependencies:
 - nbgrader
 - pip:
     - ordo
+    - .
