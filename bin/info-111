@@ -54,7 +54,11 @@ case $command in
         exit 0;;
     g++)
         command="g++ -Wall -pedantic";;
-    jupyter);;
+    jupyter)
+        if [ "$1" = "notebook" ]; then
+            shift
+            command="jupyter notebook --ip=127.0.0.1"
+        fi;;
     get)
         get "$*";;
     conda);;
