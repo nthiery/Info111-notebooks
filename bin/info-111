@@ -25,7 +25,7 @@ EOF
 
 run () {
     echo "Exécution de: $@"
-    "$@" || exit -1
+    "$@" || exit 1
 }
 
 get () {
