@@ -25,7 +25,13 @@ EOF
 }
 
 run () {
-    echo "Exécution de: $@"
+    tput setaf 2
+    echo -n "info-111: exécution de:"
+    tput rmul
+    echo -n " "
+    tput setaf 1
+    echo "$@"
+    tput init
     "$@" || exit 1
 }
 
