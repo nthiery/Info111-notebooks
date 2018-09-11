@@ -5,20 +5,21 @@ url="http://Nicolas.Thiery.name/Enseignement/Info111/"
 help () {
     cat <<EOF
 
-Aide pour l'uilisation de la commande info-111
+Aide pour l'utilisation de la commande info-111
 ==============================================
 
-Télécharger l'archive pour un TP ou un projet:
+Télécharger et extraire l'archive pour un TP ou un projet (ici pour la semaine 1):
 
+       cd ~/Info111
        info-111 get Semaine1
 
 Lancer le notebook jupyter:
 
        info-111 jupyter notebook
 
-Compiler un programme:
+Compiler un programme (ici essai.cpp):
 
-       info-111 g++ essai.c -o essai
+       info-111 g++ essai.cpp -o essai
 
 EOF
 }
