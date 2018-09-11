@@ -54,7 +54,7 @@ case $command in
         help
         exit 0;;
     g++)
-        command="g++ -Wall -pedantic";;
+        command="g++ -Wall -pedantic -Wno-sign-compare -Wno-unused-value -std=c++11 ";;
     jupyter)
         if [ "$1" = "notebook" ]; then
             shift
