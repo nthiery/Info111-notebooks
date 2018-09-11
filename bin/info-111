@@ -11,7 +11,12 @@ Aide pour l'utilisation de la commande info-111
 Télécharger et extraire l'archive pour un TP ou un projet (ici pour la semaine 1):
 
        cd ~/Info111
-       info-111 get Semaine1
+       info-111 fetch Semaine1
+
+Soumettre son TP ou projet (ici pour la semaine 1):
+
+       cd ~/Info111
+       info-111 submit Semaine1
 
 Lancer le notebook jupyter:
 
@@ -22,6 +27,13 @@ Compiler un programme (ici essai.cpp):
        info-111 g++ essai.cpp -o essai
 
 EOF
+}
+
+check_dir () {
+    if [ `pwd` != "$HOME/Info111" ]; then
+        echo Vous devez être dans le sous-répertoire Info111 de votre répertoire pour lancer cette commande
+        exit 1
+    fi
 }
 
 run () {
@@ -35,16 +47,16 @@ run () {
     "$@" || exit 1
 }
 
-get () {
-    if [ `pwd` != "$HOME/Info111" ]; then
-        echo Vous devez être dans le sous-répertoire Info111 de votre répertoire pour lancer cette commande
-        exit 1
-    fi
+fetch () {
     archive=$1
     run wget "$url/$archive.zip"
     run unzip "$archive.zip"
     run rm "$archive.zip"
     exit 0
+}
+
+submit() {
+    nbgrader submit --ExchangeSubmit.root=/public/info-111/exchange --course=info-111 $1
 }
 
 command=$1
@@ -67,7 +79,14 @@ case $command in
             command="jupyter notebook --ip=127.0.0.1"
         fi;;
     get)
-        get "$@";;
+        check_dir
+        fetch "$@";;
+    fetch)
+        check_dir
+        fetch "$@";;
+    submit)
+        check_dir
+        submit "$@";;
     run) # run an arbitrary command in the conda environment; for testing and teacher's use
         command="$1"
         shift;;
