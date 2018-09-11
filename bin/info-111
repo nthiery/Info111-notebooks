@@ -6,7 +6,7 @@ help () {
     cat <<EOF
 
 Aide pour l'utilisation de la commande info-111
-==============================================
+===============================================
 
 Télécharger et extraire l'archive pour un TP ou un projet (ici pour la semaine 1):
 
