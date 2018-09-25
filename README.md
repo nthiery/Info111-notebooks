@@ -2,6 +2,8 @@
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nthiery/Info111-notebooks/master)
 
+https://mybinder.org/v2/git/https%3A%2F%2Fgitlab.u-psud.fr%2FInfo111%2Fnotebooks.git/master
+
 This repository holds copies of the Jupyter notebooks used during the
 practice sessions of a freshmen introductory programming course (in C++)
 [Info 111](http://Nicolas.Thiery.name/Enseignement/Info111),

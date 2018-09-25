@@ -97,7 +97,7 @@ fetch () {
 
 submit() {
     ASSIGNMENT=$1
-    if [ -n $JUPYTERHUB_USER ]; then # Sur le serveur JupyterHub
+    if [ -n "$JUPYTERHUB_USER" ]; then # Sur le serveur JupyterHub
         echo info-111: transfert du dossier $ASSIGNMENT sur les machines du SIF
         run rsync --update -avz  $HOME/$COURSE/$ASSIGNMENT $USER@$SIF:.$COURSE/$ASSIGNMENT
         echo info-111: soumission du dossier $ASSIGNMENT

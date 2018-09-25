@@ -1,15 +1,11 @@
 ## -*- encoding: utf-8 -*-
 import os
-import sys
-from setuptools import setup, Extension
-from codecs import open # To open the README file with proper encoding
-from setuptools.command.test import test as TestCommand # for tests
+from setuptools import setup
 from setuptools.command.install import install
 
-# Monkey patches xeus-cling to display type information
+# Monkey patches xeus-cling to display type information in outputs
 import shutil
 class CustomInstallCommand(install):
-    """Customized setuptools install command - prints a friendly greeting."""
     def run(self):
         file = "xmime.hpp"
         target = os.path.join(self.install_base, "include", "xcpp", file)
