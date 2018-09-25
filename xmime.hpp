@@ -12,10 +12,10 @@
 #include "cling/Interpreter/RuntimePrintValue.h"
 #include "xeus/xjson.hpp"
 
-// Patch for info-111: print type information alongside outputs
+// Patch for info-111 by Nicolas M. Thiéry: print type information alongside outputs
 #include <cxxabi.h>
 template<class C>
-char * type(C c) {
+char * type(const C &c) {
     int status;
     char * demangled;
     return abi::__cxa_demangle(typeid(c).name(),0,0,&status);
