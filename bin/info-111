@@ -6,6 +6,7 @@ if [ -n "$JUPYTERHUB_USER" ]; then
 fi
 SIF=tp-ssh1.dep-informatique.u-psud.fr
 COURSE=Info111
+export LANG=fr_FR.UTF-8
 
 help () {
     cat <<EOF
