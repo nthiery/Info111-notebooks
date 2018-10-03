@@ -3,14 +3,18 @@ import os
 from setuptools import setup
 from setuptools.command.install import install
 
-# Monkey patches xeus-cling to display type information in outputs
 import shutil
 class CustomInstallCommand(install):
     def run(self):
+        # Monkey patches xeus-cling to display type information in outputs
         file = "xmime.hpp"
         target = os.path.join(self.install_base, "include", "xcpp", file)
         print("manually copying {} to {} ".format(file, target))
         shutil.copyfile(file, target)
+        # Activate nbgrader's extensions
+        os.system("jupyter nbextension install --sys-prefix --py nbgrader")
+        os.system("jupyter nbextension enable --sys-prefix --py nbgrader")
+        # Proceed with standard install
         install.run(self)
 
 setup(
