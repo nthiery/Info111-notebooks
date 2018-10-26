@@ -6,7 +6,7 @@ channels:
 - conda-forge
 
 dependencies:
-- xeus-cling
+- xeus-cling=0.4.8
 - notebook
 - nbgrader
 - pandas         # for managing grades
