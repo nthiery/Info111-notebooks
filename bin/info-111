@@ -76,11 +76,11 @@ check_dir () {
 }
 
 run () {
-    tput setaf 2
+    #tput setaf 2
     echo -n "info-111: exécution de:"
-    tput rmul
+    #tput rmul
     echo -n " "
-    tput setaf 1
+    tput setaf 2
     echo "$@"
     tput sgr0
     if [ -z $DRY_RUN ]; then
@@ -156,7 +156,7 @@ case $command in
         advanced_help
         exit 0;;
     g++)
-        command="g++ -Wall -pedantic -Wno-sign-compare -Wno-unused-value -std=c++11 ";;
+        command="g++ -g -Wall -pedantic -Wno-sign-compare -Wno-unused-value -std=c++11 ";;
     jupyter)
         if [ "$1" = "notebook" ]; then
             shift
