@@ -2,14 +2,16 @@
 name: info-111
 
 channels:
-- QuantStack
 - conda-forge
 
 dependencies:
-- xeus-cling=0.4.8
+- xeus-cling
 - notebook
 - nbgrader
 - pandas         # for managing grades
+- qgrid          # for managing grades
+- xwidgets
+- pip
 - pip:
     - ordo
     - nbdime
