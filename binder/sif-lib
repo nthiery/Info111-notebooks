@@ -1,0 +1,24 @@
+# sif-lib: bibliothèque de fonctions commune à info-111, info-114, ...
+
+warning() {
+    echo -n "$SCRIPT: "
+    tput setaf 1
+    echo $*
+    tput sgr0
+}
+
+sync_unison() {
+    ASSIGNMENT=$1
+    shift
+    echo $SCRIPT: synchronisation du dossier $COURSE/$ASSIGNMENT avec les salles de TP du SIF
+
+    if [ -z "$JUPYTERHUB_USER" ]; then
+        warning "Rappel: la synchronisation doit être lancée depuis un terminal sur le serveur JupyterHub (ou votre machine personelle)"
+    fi
+
+    warning "'local'    représente le serveur JupyterHub"
+    warning "'a-140395' représente les salles de TP du SIF"
+
+    cd $HOME
+    run unison -auto -backups "$@" $COURSE/$ASSIGNMENT ssh://$USER@$SIF/$COURSE/$ASSIGNMENT
+}

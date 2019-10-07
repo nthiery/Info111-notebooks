@@ -1,0 +1,22 @@
+# Logiciels requis pour utiliser et travailler sur les documents du cours Info 111
+name: info-111
+
+channels:
+- conda-forge
+
+dependencies:
+- xeus-cling
+- notebook
+- nbgrader
+- pandas         # for managing grades
+- qgrid          # for managing grades
+- xwidgets
+- pip
+- pip:
+    - ordo
+    - nbdime
+    - "git+https://github.com/nthiery/laby-jupyter"
+    - .
+#- matplotlib
+#- cycler         # missing matplotlib dependecy: https://stackoverflow.com/questions/44419333/matplotlib-cant-find-cycler
+#- xplot
