@@ -218,6 +218,7 @@ case $command in
         cd $ROOT/binder
         git pull
         run conda env $1
+        run ./postBuild
         exit 0;;
     *)
         echo commande info-111 $command inconnue

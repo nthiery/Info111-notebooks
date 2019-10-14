@@ -1,0 +1,526 @@
+nbdiff Semaine6/tp6-feuille-1.ipynb (fafd9d39e0c7ea69561ac95c8dabcf52d5f84e4b) Semaine6/tp6-feuille-1.ipynb
+--- Semaine6/tp6-feuille-1.ipynb (fafd9d39e0c7ea69561ac95c8dabcf52d5f84e4b)  (no timestamp)
++++ Semaine6/tp6-feuille-1.ipynb  2019-10-14 22:32:36.931006
+[34m## modified /cells/1/source:[0m
+[31m-  ### Rappels d'utilisation des tableaux:
+[32m+  ## Rappels d'utilisation des tableaux
+
+[0m[34m## modified /cells/4/source:[0m
+[36m@@ -1,3 +1 @@[m
+[31m-<span style="color:red">Nous vous conseillons fortement lorsque vous avez besoin de redémarrer le noyau avec **Kernel > Restart** (and clear all si vous voulez faire le ménage) de faire ensuite systématiquement la commande **Cell > Run all above** , car toutes les fonctions définies dans cette feuille seront utilisées à la fin.</span>[m
+[31m-#   [m
+[31m-## I. Reconnaitre les yams[m
+[m
+[32m+[m[32m<span style="color:red">Nous vous conseillons fortement lorsque vous avez besoin de redémarrer le noyau avec **Kernel > Restart** (and clear all si vous voulez faire le ménage) de faire ensuite systématiquement la commande **Cell > Run all above** , car toutes les fonctions définies dans cette feuille seront utilisées à la fin.</span>[m[41m   [m
+[m
+
+[0m[34m## inserted before /cells/5:[0m
+[32m+  markdown cell:
+[32m+    metadata (unknown keys):
+[32m+      nbgrader:
+[32m+        grade: False
+[32m+        grade_id: cell-e8fa588409cbc546
+[32m+        locked: True
+[32m+        schema_version: 3
+[32m+        solution: False
+[32m+    source:
+[32m+      ## Reconnaître les yams
+
+[0m[34m## added /cells/6/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-45fe263635974dfe
+[32m+  locked: False
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: True
+[32m+  task: False
+
+[0m[34m## added /cells/9/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-901b2df503fc5c9e
+[32m+  locked: False
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: True
+[32m+  task: False
+
+[0m[34m## modified /cells/10/source:[0m
+[36m@@ -1,4 +1,4 @@[m
+[31m-## I bis. Compilation et test en dehors de Jupyter[m
+[32m+[m[32m## Compilation et test en dehors de Jupyter[m
+ [m
+ - Ouvrez le fichier `yams.cpp` fourni dans l'archive Semaine6 avec un éditeur de texte tel que jedit.[m
+ - Copiez-collez votre fonction `pointsFigureYams` à un endroit adapté.[m
+
+[0m[34m## modified /cells/11/source:[0m
+[31m-  ## II. Quelques utilitaires
+[32m+  ## Quelques utilitaires
+
+[0m[34m## added /cells/15/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-a97bbbe154079a56
+[32m+  locked: False
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: True
+[32m+  task: False
+
+[0m[34m## modified /cells/17/source:[0m
+[36m@@ -1,3 +1,3 @@[m
+ ### `afficheDes`[m
+ [m
+[31m-Complétez la documentation de la fonction `afficheDes` puis implémentez-la dans la case suivante. Pour rappel, cette fonction doit afficher les valeurs des dés qui lui sont donnés en entrée.[m
+[m
+[32m+[m[32mComplétez la documentation de la fonction `afficheDes` puis implémentez-la dans la cellule suivante. Pour rappel, cette fonction doit afficher les valeurs des dés qui lui sont donnés en entrée.[m
+[m
+
+[0m[34m## added /cells/18/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-0178475f12ab1004
+[32m+  locked: False
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: True
+[32m+  task: False
+
+[0m[34m## added /cells/21/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-b0fd0778b45f503e
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/23/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-9407b3027906a87e
+[32m+  locked: False
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: True
+[32m+  task: False
+
+[0m[34m## modified /cells/24/source:[0m
+[36m@@ -1,11 +1,10 @@[m
+ tableau compteDes(vector<int> des) {[m
+[31m-[m
+[31m-/// BEGIN SOLUTION[m
+[31m-  vector<int> res = {0, 0, 0, 0, 0, 0};[m
+[31m-  for(int i = 0; i < des.size(); i++) {[m
+[31m-    int indice = des[i] - 1;[m
+[31m-    res[indice] += 1;[m
+[31m-  }[m
+[31m-  return res;[m
+[31m-/// END SOLUTION[m
+[32m+[m[32m    /// BEGIN SOLUTION[m
+[32m+[m[32m    vector<int> res = {0, 0, 0, 0, 0, 0};[m
+[32m+[m[32m    for ( int i = 0; i < des.size(); i++ ) {[m
+[32m+[m[32m        int indice = des[i] - 1;[m
+[32m+[m[32m        res[indice] += 1;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    return res;[m
+[32m+[m[32m    /// END SOLUTION[m
+ }[m
+[m
+
+[0m[34m## added /cells/28/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-c6173d278ad50a68
+[32m+  locked: False
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: True
+[32m+  task: False
+
+[0m[34m## modified /cells/29/source:[0m
+[36m@@ -1,12 +1,11 @@[m
+ /// BEGIN SOLUTION[m
+ int chercheDansTab(int n, vector<int> tab) {[m
+[31m-  for(int i = 0; i < tab.size(); i++) {[m
+[31m-    if(tab[i] == n) {[m
+[31m-      return i;[m
+[32m+[m[32m    for ( int i = 0; i < tab.size(); i++ ) {[m
+[32m+[m[32m        if ( tab[i] == n ) {[m
+[32m+[m[32m            return i;[m
+[32m+[m[32m        }[m
+     }[m
+[31m-  }[m
+[31m-[m
+[31m-  // Si on n'a pas trouvé l'entier on renvoie -1 :[m
+[31m-  return -1;[m
+[32m+[m[32m    // Si on n'a pas trouvé l'entier on renvoie -1 :[m
+[32m+[m[32m    return -1;[m
+ }[m
+ /// END SOLUTION[m
+[m
+
+[0m[34m## replaced /cells/31/metadata/nbgrader/points:[0m
+[31m-  0
+[32m+  1
+
+[0m[34m## modified /cells/31/source:[0m
+[36m@@ -1,2 +1,2 @@[m
+[31m-ASSERT( chercheDansTab(3, {42,5,3,6,7}) == 2);[m
+[32m+[m[32mASSERT( chercheDansTab( 3, {42,5,3,6,7}) ==  2);[m
+ ASSERT( chercheDansTab(56, {42,3,5,6,7}) == -1);[m
+[m
+
+[0m[34m## modified /cells/32/source:[0m
+[36m@@ -1,4 +1,4 @@[m
+ /// BEGIN SOLUTION[m
+[31m-ASSERT( chercheDansTab(2, {1,2,3,4,5,6}) == 1);[m
+[31m-ASSERT( chercheDansTab(99, {4,7,3,2,9}) == -1);[m
+[32m+[m[32mASSERT( chercheDansTab( 2, {1,2,3,4,5,6}) ==  1);[m
+[32m+[m[32mASSERT( chercheDansTab(99, {4,7,3,2,9  }) == -1);[m
+ /// END SOLUTION[m
+[m
+
+[0m[34m## added /cells/34/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-fc92242a65bb244c
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## modified /cells/36/source:[0m
+[36m@@ -1,4 +1,4 @@[m
+[31m-## II bis. Compilation et test en dehors de Jupyter[m
+[32m+[m[32m## Compilation et test en dehors de Jupyter[m
+ [m
+ - Ouvrez votre fichier `yams.cpp`.[m
+ - Copiez-collez les fonctions `lanceDes`, `compteDes` et `chercheDansTab` à un endroit adapté.[m
+
+[0m[34m## modified /cells/37/source:[0m
+[36m@@ -1,2 +1 @@[m
+[31m-#  [m
+[31m-## III. Les autres figures[m
+[m
+[32m+[m[32m ## Les autres figures[m
+[m
+
+[0m[34m## added /cells/39/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-e0e0e9091c124592
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/40/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-c9713a5cdc3e9d24
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## modified /cells/40/source:[0m
+[36m@@ -1,10 +1,12 @@[m
+ int pointsFigureBrelan(vector<int> des) {[m
+[31m-  vector<int> compte = compteDes(des);[m
+[32m+[m[32m    vector<int> compte = compteDes(des);[m
+     [m
+[31m-  int valeur = (chercheDansTab(3, compte) + 1) [m
+[31m-                      + (chercheDansTab(4, compte) + 1) [m
+[31m-                      + (chercheDansTab(5, compte) + 1);[m
+[32m+[m[32m    int valeur = (chercheDansTab(3, compte) + 1)[m
+[32m+[m[32m               + (chercheDansTab(4, compte) + 1)[m
+[32m+[m[32m               + (chercheDansTab(5, compte) + 1);[m
+ [m
+[31m-  if (valeur > 0) return (valeur * 3) + 10;[m
+[31m-  else return 0;[m
+[32m+[m[32m    if (valeur > 0)[m[41m [m
+[32m+[m[32m        return (valeur * 3) + 10;[m
+[32m+[m[32m    else[m
+[32m+[m[32m        return 0;[m
+ }[m
+[m
+
+[0m[34m## added /cells/41/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-d1fdee8dffebbc7c
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## replaced /cells/42/metadata/nbgrader/grade:[0m
+[31m-  False
+[32m+  True
+
+[0m[34m## added /cells/42/metadata/nbgrader/points:[0m
+[32m+  1
+
+[0m[34m## added /cells/42/metadata/nbgrader/task:[0m
+[32m+  False
+
+[0m[34m## modified /cells/42/source:[0m
+[36m@@ -1,5 +1,5 @@[m
+ /// BEGIN SOLUTION[m
+ ASSERT( pointsFigureBrelan({4,4,4,1,1}) == 22 );[m
+[31m-ASSERT( pointsFigureBrelan({1,1,4,4,5}) == 0 );[m
+[32m+[m[32mASSERT( pointsFigureBrelan({1,1,4,4,5}) ==  0 );[m
+ ASSERT( pointsFigureBrelan({1,1,1,1,5}) == 13 );[m
+ /// END SOLUTION[m
+[m
+
+[0m[34m## added /cells/43/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-8e9ded0c351723a8
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/44/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-a5b3fd2f1ed74d99
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/46/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-ee350756a6f1c8e6
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/48/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-e9ed1239c05d3a53
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/49/metadata/nbgrader:[0m
+[32m+  grade: True
+[32m+  grade_id: cell-a7740a7033a46a89
+[32m+  locked: True
+[32m+  points: 1
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## modified /cells/50/source:[0m
+[36m@@ -1,2 +1,2 @@[m
+ ### `pointsFigure`[m
+[31m-Nous vous donnons la fonction `pointsFigure` vue en TD qui a pour but de chercher la figure choisie par l'utilisateur (via une chaine de caractère) et de retourner le nombre de points ainsi obtenu.[m
+[m
+[32m+[m[32mNous vous donnons la fonction `pointsFigure` vue en TD qui a pour but de chercher la figure choisie par l'utilisateur (via une chaîne de caractères) et de retourner le nombre de points ainsi obtenu.[m
+[m
+
+[0m[34m## added /cells/51/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-452384d8a308fc1f
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/52/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-328296671f32464d
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## modified /cells/52/source:[0m
+[36m@@ -1,12 +1,12 @@[m
+ int pointsFigure(vector<int> des, string figure) {[m
+[31m-  if(figure == "brelan") {[m
+[31m-    return pointsFigureBrelan(des);[m
+[31m-  } else if(figure == "full") {[m
+[31m-    return pointsFigureFull(des);[m
+[31m-  } else if(figure == "carre") {[m
+[31m-    return pointsFigureCarre(des);[m
+[31m-  } else if(figure == "yams") {[m
+[31m-    return pointsFigureYams(des);[m
+[31m-  } [m
+[31m-  return 0;[m
+[32m+[m[32m    if        ( figure == "brelan" ) {[m
+[32m+[m[32m      return pointsFigureBrelan(des);[m
+[32m+[m[32m    } else if ( figure == "full"   ) {[m
+[32m+[m[32m        return pointsFigureFull(des);[m
+[32m+[m[32m    } else if ( figure == "carre"  ) {[m
+[32m+[m[32m        return pointsFigureCarre(des);[m
+[32m+[m[32m    } else if ( figure == "yams"   ) {[m
+[32m+[m[32m        return pointsFigureYams(des);[m
+[32m+[m[32m    }[m[41m [m
+[32m+[m[32m    return 0;[m
+ }[m
+[m
+
+[0m[34m## modified /cells/53/source:[0m
+[36m@@ -1,8 +1,8 @@[m
+[31m-## III bis. Compilation et test en dehors de Jupyter[m
+[32m+[m[32m## Compilation et test en dehors de Jupyter[m
+ [m
+ - Ouvrez votre fichier `yams.cpp`.[m
+ - Copiez-collez les fonctions `pointsFigureCarre` et `pointsFigureFull` à un endroit adapté.[m
+ - *Décommentez* les fonctions `pointsFigureBrelan` et `pointsFigure`.[m
+ - **Enregistrez** votre fichier `yams.cpp`[m
+ - **Vérifiez qu'il compile toujours** à l'aide de la commande `g++ --std=c++11 yams.cpp -o yams`[m
+[31m-- *Exécuter le programme tel quel ne changera rien à l'exécution précedente car nous n'avons pas modifié la fonction **main**, c'est ce que nous allons faire dans la partie suivante.*[m
+[m
+[32m+[m[32m- *Exécuter le programme tel quel ne changera rien à l'exécution précédente car nous n'avons pas modifié la fonction **main**, c'est ce que nous allons faire dans la partie suivante.*[m
+[m
+
+[0m[34m## modified /cells/54/source:[0m
+[36m@@ -1,2 +1 @@[m
+[31m-#   [m
+[31m-# IV. Boucle de jeu : la fonction main[m
+[m
+[32m+[m[32m## Boucle de jeu : la fonction main[m
+[m
+
+[0m[34m## modified /cells/55/source:[0m
+[36m@@ -1,8 +1,8 @@[m
+ La boucle de jeu, infinie, se décompose de la façon suivante :[m
+[31m-> #### Avant la boucle :[m
+[32m+[m[32m> ### Avant la boucle :[m
+ > - Déclaration des variables permettant de stocker la valeur des **dés**, le **score** et la **reponse** écrite du joueur.[m
+ >[m
+[31m-> #### Pendant la boucle :[m
+[32m+[m[32m> ### Pendant la boucle :[m
+ > - On lance les dés et on stocke le résultat dans la variable appropriée.[m
+ > - On affiche le résultat du lancé à l'utilisateur et on demande quelle figure il choisit.[m
+ > - On boucle tant que l'utilisateur donne une réponse qui n'est ni une figure (**brelan**, **full**, **carre**, **yams**) ni **exit**.[m
+
+[0m[34m## replaced /cells/59/metadata/nbgrader/grade:[0m
+[31m-  False
+[32m+  True
+
+[0m[34m## added /cells/59/metadata/nbgrader/points:[0m
+[32m+  1
+
+[0m[34m## added /cells/59/metadata/nbgrader/task:[0m
+[32m+  False
+
+[0m[34m## replaced /cells/61/metadata/nbgrader/grade:[0m
+[31m-  False
+[32m+  True
+
+[0m[34m## added /cells/61/metadata/nbgrader/points:[0m
+[32m+  1
+
+[0m[34m## added /cells/61/metadata/nbgrader/task:[0m
+[32m+  False
+
+[0m[34m## added /cells/63/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-9c34399406e3c9fb
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## added /cells/65/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-1e5d72c36917c373
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## modified /cells/65/source:[0m
+[31m-  if(reponse == "exit") cout << "Fin du jeu, votre score final est : " << score << endl;
+[32m+  if (reponse == "exit") cout << "Fin du jeu, votre score final est : " << score << endl;
+
+[0m[34m## modified /cells/69/source:[0m
+[36m@@ -1,2 +1,2 @@[m
+[31m-## IV bis. Compilation et test en dehors de Jupyter[m
+[32m+[m[32m## Compilation et test en dehors de Jupyter[m
+ Enfin, en vous basant sur le code de cette partie de la fiche, la fin du TD et le squelette suivant, **complétez la fonction main de votre fichier *yams.cpp* afin de pouvoir jouer au jeu en l'exécutant (après l'avoir compilé) depuis votre terminal**. *(Si jamais vous entrez dans une boucle infinie, vous pouvez stopper votre programme à tout moment en pressant les touches `ctrl+c`)*[m
+[m
+
+[0m[34m## added /cells/70/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-a70fb12dada72cca
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## modified /cells/71/source:[0m
+[31m-  ## <span style="font-size: 150%">♣</span> V.  De la suite dans les idées 
+[32m+  ## <span style="font-size: 150%">♣</span> De la suite dans les idées 
+
+[0m[34m## added /cells/73/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-ae6ac015ffb2c632
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## replaced /cells/75/metadata/nbgrader/points:[0m
+[31m-  0
+[32m+  1
+
+[0m[34m## added /cells/76/metadata/nbgrader:[0m
+[32m+  grade: False
+[32m+  grade_id: cell-9c53aa2f27303d0b
+[32m+  locked: True
+[32m+  schema_version: 3
+[32m+  solution: False
+[32m+  task: False
+
+[0m[34m## replaced /cells/78/metadata/nbgrader/points:[0m
+[31m-  0
+[32m+  1
+
+[0m[34m## modified /cells/80/source:[0m
+[36m@@ -1,4 +1,4 @@[m
+[31m-## V bis. Compilation et test en dehors de Jupyter[m
+[32m+[m[32m## Compilation et test en dehors de Jupyter[m
+ [m
+ - **Ajoutez à votre fichier yams.cpp les fonctions que vous venez de réaliser.** [m
+ - Modifiez la fonction **main** en conséquence. [m
+
+[0m[34m## deleted /cells/81:[0m
+[31m-  code cell:
+
+[0m[34m## added /metadata/toc:[0m
+[32m+  base_numbering: 1
+[32m+  nav_menu:
+[32m+  number_sections: True
+[32m+  sideBar: True
+[32m+  skip_h1_title: False
+[32m+  title_cell: Table of Contents
+[32m+  title_sidebar: Contents
+[32m+  toc_cell: False
+[32m+  toc_position:
+[32m+  toc_section_display: True
+[32m+  toc_window_display: False
+
+[0m[34m## added /metadata/varInspector:[0m
+[32m+  cols:
+[32m+    lenName: 16
+[32m+    lenType: 16
+[32m+    lenVar: 40
+[32m+  kernels_config:
+[32m+    python:
+[32m+      delete_cmd_postfix: 
+[32m+      delete_cmd_prefix: del 
+[32m+      library: var_list.py
+[32m+      varRefreshCmd: print(var_dic_list())
+[32m+    r:
+[32m+      delete_cmd_postfix: ) 
+[32m+      delete_cmd_prefix: rm(
+[32m+      library: var_list.r
+[32m+      varRefreshCmd: cat(var_dic_list()) 
+[32m+  types_to_exclude:
+[32m+    item[0]: module
+[32m+    item[1]: function
+[32m+    item[2]: builtin_function_or_method
+[32m+    item[3]: instance
+[32m+    item[4]: _Feature
+[32m+  window_display: False
+
+[0m

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+jupyter nbextension enable codefolding/main
+jupyter nbextension enable codefolding/edit
+jupyter nbextension enable varInspector/main
+jupyter nbextension enable toc2/main
+jupyter nbextension enable collapsible_headings/main
+jupyter nbextension install --sys-prefix --py nbgrader --overwrite
+jupyter nbextension enable --sys-prefix --py nbgrader
+jupyter serverextension enable --sys-prefix --py nbgrader

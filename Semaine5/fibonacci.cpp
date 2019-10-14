@@ -14,11 +14,20 @@ int fibonacci(int n) {
     // À faire: Écrire le code ici!
 }
 
-void fibonacciTest() {
+void fibonacciTestBroken() {
     ASSERT( fibonacci(1) == 1 );
     ASSERT( fibonacci(2) == 1 );
     ASSERT( fibonacci(3) == 2 );
     ASSERT( fibonacci(4) == 4 );
+    ASSERT( fibonacci(5) == 5 );
+    ASSERT( fibonacci(6) == 8 );
+}
+
+void fibonacciTest() {
+    ASSERT( fibonacci(1) == 1 );
+    ASSERT( fibonacci(2) == 1 );
+    ASSERT( fibonacci(3) == 2 );
+    ASSERT( fibonacci(4) == 3 );
     ASSERT( fibonacci(5) == 5 );
     ASSERT( fibonacci(6) == 8 );
 }

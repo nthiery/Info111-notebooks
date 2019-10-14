@@ -12,9 +12,11 @@ dependencies:
 - qgrid          # for managing grades
 - xwidgets
 - pip
+- jupyter_contrib_nbextensions
 - pip:
     - ordo
     - nbdime
+    - "git+https://github.com/nthiery/nbgrader.git@sif"
     - "git+https://github.com/nthiery/laby-jupyter"
     - .
 #- matplotlib
