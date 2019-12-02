@@ -15,7 +15,8 @@ using namespace std;
  *  @param nomFichier le nom du fichier
  **/
 void afficheNotes(string nomFichier) {
-    ifstream fluxFichier(nomFichier);
+    ifstream fluxFichier;
+    fluxFichier.open(nomFichier);
     string nom;
     int noteSur10;
     while ( fluxFichier >> nom and fluxFichier >> noteSur10) {
@@ -24,21 +25,23 @@ void afficheNotes(string nomFichier) {
     fluxFichier.close();
 }
 
-void mystere(string zut) {
-    ifstream bar(zut);
-    string foo;
-    int hop;
-    while ( bar >> foo and bar >> hop ) {
-        cout << foo << " " << 2 * hop << endl;
+void mystere(string nomFichier) {
+    ifstream fichier;
+    fichier.open(nomFichier);
+    string t;
+    int n;
+    while ( fichier >> t and fichier >> n ) {
+        cout << t << " " << 2 * n << endl;
     }
-    bar.close();
+    fichier.close();
 }
 /** compte le nombre de caractères d'un fichier
  *  @param nomFichier le nom du fichier
  *  @return le nombre de caractères contenus dans le fichier
  */
-int mystereEpais(string rezut) {
-    ifstream bla(rezut);
+int mystereEpais(string zut) {
+    ifstream bla;
+    bla.open(zut);
     int foo = 0;
     char y;
     while ( bla >> y ) {
@@ -49,7 +52,8 @@ int mystereEpais(string rezut) {
 }
 
 float moyenne(string nomFichier) {
-    ifstream varFichier(nomFichier);
+    ifstream varFichier;
+    varFichier.open(nomFichier);
     string temp;
     int note;
     int somme = 0;
@@ -63,7 +67,8 @@ float moyenne(string nomFichier) {
 }
 
 vector<int> lit_notes(string nomFichier) {
-    ifstream fichier(nomFichier);
+    ifstream fichier;
+    fichier.open(nomFichier);
     vector<int> notes;
     string temp;
     int note;
@@ -75,7 +80,8 @@ vector<int> lit_notes(string nomFichier) {
 }
 
 int word_count(string nomFichier) {
-    ifstream fichier(nomFichier);
+    ifstream fichier;
+    fichier.open(nomFichier);
     int nbr = 0;
     string temp;
     while ( fichier >> temp ) {
@@ -86,7 +92,8 @@ int word_count(string nomFichier) {
 }
 
 int line_count(string nomFichier) {
-    ifstream fichier(nomFichier);
+    ifstream fichier;
+    fichier.open(nomFichier);
     string ligne;
     int compteur = 0;
     while ( getline(fichier, ligne) ) {
@@ -97,7 +104,8 @@ int line_count(string nomFichier) {
 }
 
 void cat(string nomFichier) {
-    ifstream fichier(nomFichier);
+    ifstream fichier;
+    fichier.open(nomFichier);
     string ligne;
     while ( getline(fichier,ligne) ) {
         cout << ligne << endl;
@@ -106,8 +114,10 @@ void cat(string nomFichier) {
 }
 
 void copy(string source, string destination) {
-    ifstream fichierS(source);
-    ofstream fichierD(destination);
+    ifstream fichierS;
+    fichierS.open(source);
+    ofstream fichierD;
+    fichierD.open(destination);
     string ligne;
     while ( getline(fichierS, ligne) ) {
         fichierD << ligne << endl;
@@ -118,21 +128,24 @@ void copy(string source, string destination) {
 
 int main() {
     cout << "-- cat fichier-test --" << endl;
-    cat("fichier-test.txt");
+    cat("truc.txt");
 
     cout << "-- mystere --" << endl;
-    mystere("fichier-test.txt");
+    mystere("truc.txt");
 
     cout << "-- Tests --" << endl;
-    ASSERT( mystereEpais("fichier-test.txt") == 65 );
-    ASSERT( moyenne("fichier-test.txt") == 3 );
-    ASSERT( lit_notes("fichier-test.txt") == vector<int>( {4,2,3,2,1,5,5,4,4,5} ) );
-    ASSERT( word_count("fichier-test.txt") == 20 );
-    ASSERT( line_count("fichier-test.txt") == 10 );
+    ASSERT( mystereEpais("truc.txt") == 65 );
+    ASSERT( moyenne("truc.txt") == 3 );
+    ASSERT( lit_notes("truc.txt") == vector<int>( {4,2,3,2,1,5,5,4,4,5} ) );
+    ASSERT( word_count("truc.txt") == 20 );
+    ASSERT( line_count("truc.txt") == 10 );
 
     cout << "-- copy --" << endl;
-    copy("fichier-test.txt", "fichier-test-copy.txt");
-    cout << "-- cat fichier-test-copy --" << endl;
-    cat("fichier-test-copy.txt");
+    copy("truc.txt", "truc-copy.txt");
+    cout << "-- cat truc-copy --" << endl;
+    cat("truc-copy.txt");
+
+    cout << "-- afficheNotes ---" << endl ;
+    afficheNotes("truc.txt");
     return 0;
 }

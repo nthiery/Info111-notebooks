@@ -68,12 +68,13 @@ void afficheColonne(vector<vector<int>> t, int c) {
     throw runtime_error("Fonction afficheColonne non implanté ligne 68");
 }
 
-/** affiche tous les éléments de la première diagonale de t (supposé carré).
+/** affiche tous les éléments de la première diagonale d'un
+    tableau t supposé carré
  * @param t le tableau 2D d'entiers
  **/
 void afficheDiagonale(vector<vector<int>> t) {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction afficheDiagonale non implanté ligne 76");
+    throw runtime_error("Fonction afficheDiagonale non implanté ligne 77");
 }
 
 /** affiche tous les elements de t.
@@ -81,7 +82,7 @@ void afficheDiagonale(vector<vector<int>> t) {
  **/
 void affiche(vector<vector<int>> t) {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction affiche non implanté ligne 84");
+    throw runtime_error("Fonction affiche non implanté ligne 85");
 }
 
 /** Test d'appartenance
@@ -91,12 +92,12 @@ void affiche(vector<vector<int>> t) {
  **/
 bool appartient(vector<vector<int>> t, int x) {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction appartient non implanté ligne 94");
+    throw runtime_error("Fonction appartient non implanté ligne 95");
 }
 
 void appartientTest() {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction appartientTest non implanté ligne 99");
+    throw runtime_error("Fonction appartientTest non implanté ligne 100");
 }
 
 int main() {

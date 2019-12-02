@@ -50,9 +50,24 @@ void sommeTest() {
     ASSERT( somme(matriceCarre, matriceSymetrique) == Matrice({{ 2, 4, 6 }, { 6, 22, 10 }, { 12, 16, 7 }}) );
 }
 
+/** produit de deux matrices dont les dimensions sont compatibles
+ * @param t1 une matrice
+ * @param t2 une matrice
+ * @return la matrice t1 * t2 (produit matriciel)
+ **/
+Matrice produit(Matrice t1, Matrice t2) {
+    // Remplacer la ligne suivante par le code adéquat
+    throw runtime_error("Fonction produit non implanté ligne 60");
+}
+
+
+void produitTest() {
+    ASSERT( produit(matriceCarre, matriceCarre) == Matrice({{ 36, 60, 36 }, { 102, 201, 120 }, { 120, 234, 148 }}) );
+}
 
 int main() {
     // Lance tous les tests
     estSymetriqueTest();
     sommeTest();
+    produitTest();
 }

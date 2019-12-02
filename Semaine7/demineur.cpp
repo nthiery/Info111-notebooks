@@ -56,24 +56,9 @@ bool boolAleatoire() {
  * @return un tableau de caractères de n lignes et m colonnes rempli
  *  aléatoirement et ne contenant que des 'm' ou 'o'
  **/
-vector<vector<char> > grilleInitiale(int n, int m) {
-    // Déclaration
-    GrilleDemineur result;
-    // Allocation
-    result = GrilleDemineur(n);
-    // Allocation des sous-tableaux
-    for (int i = 0; i < n; i++)
-        result[i] = vector<char>(m);
-    // Initialisation
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            if (boolAleatoire())
-                result[i][j] = 'm';
-            else
-                result[i][j] = 'o';
-        }
-    }
-    return result;
+GrilleDemineur grilleInitiale(int n, int m) {
+    // Remplacer la ligne suivante par le code adéquat
+    throw runtime_error("Fonction grilleInitiale non implanté ligne 61");
 }
 
 /** Teste si une grille est gagnante
@@ -83,7 +68,7 @@ vector<vector<char> > grilleInitiale(int n, int m) {
  **/
 bool grilleEstGagnante(GrilleDemineur grille) {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction grilleEstGagnante non implanté ligne 86");
+    throw runtime_error("Fonction grilleEstGagnante non implanté ligne 71");
 }
 
 void grilleEstGagnanteTest() {
@@ -100,7 +85,7 @@ void grilleEstGagnanteTest() {
  **/
 int minesVoisines(GrilleDemineur grille, int i, int j) {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction minesVoisines non implanté ligne 103");
+    throw runtime_error("Fonction minesVoisines non implanté ligne 88");
 }
 
 void minesVoisinesTest() {
@@ -123,7 +108,7 @@ void minesVoisinesTest() {
  **/
 string dessinGrille(GrilleDemineur grille) {
     // Remplacer la ligne suivante par le code adéquat
-    throw runtime_error("Fonction dessinGrille non implanté ligne 126");
+    throw runtime_error("Fonction dessinGrille non implanté ligne 111");
 }
 
 void dessinGrilleTest() {

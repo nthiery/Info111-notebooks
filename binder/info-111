@@ -181,7 +181,7 @@ case $command in
         advanced_help
         exit 0;;
     g++)
-        command="g++ -g -Wall -pedantic -Wno-sign-compare -Wno-unused-value -std=c++11 ";;
+        command="g++ -g -Wall -pedantic -Wno-sign-compare -Wno-unused-value -std=c++11 $CPPFLAGS $LDFLAGS ";;
     jupyter)
         if [ "$1" = "notebook" ]; then
             shift

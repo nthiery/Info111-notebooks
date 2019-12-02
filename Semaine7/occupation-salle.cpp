@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-vector<string> jour = {"lundi","mardi","mercredi","jeudi","vendredi"};
+vector<string> jours = {"lundi", "mardi", "mercredi", "jeudi", "vendredi"};
 
 typedef vector<vector<bool>>  TableauOccupation;  // tableau 2D de booleens
 
@@ -21,13 +21,14 @@ int main() {
     vector<vector<bool>> occupationSalle;
     occupationSalle = vector<vector<bool>>(5);
 
-    for (int i=0; i<occupationSalle.size(); i++) {
-        occupationSalle[i]=vector<bool> (11);
+    for (int i = 0; i < occupationSalle.size(); i++) {
+        occupationSalle[i] = vector<bool> (11);
     }
 
     occupationSalle[1][1] = true;
     afficheOccupation(occupationSalle);
-    cout << "taux occupation = " << tauxOccupation(occupationSalle) << "%" << endl;
+    cout << "taux occupation = " << tauxOccupation(occupationSalle) << "%" <<
+         endl;
 
     return 0;
 }

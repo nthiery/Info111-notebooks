@@ -1,3 +1,4 @@
+#include <stdexcept>
 /** @file
     Une mini bibliothèque implantant la fonction factorielle
 **/
